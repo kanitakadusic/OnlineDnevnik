@@ -1,0 +1,174 @@
+*{	
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* light & dark mode */
+
+:root {
+    --bg: #F4F4F4;
+    --color-text: #090A11;
+    --bg-element: #FB8F02;
+    --bg-opposite: #00ADB5;
+}
+
+.darkmode {
+    --bg: #0F2027;
+    --color-text: #FFFFFF;
+    --bg-element: #00ADB5;
+    --bg-opposite: #FB8F02;
+}
+
+/* containers */
+
+body {
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--color-text);
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll; 
+}
+  
+body::-webkit-scrollbar {
+    display: none;
+}
+
+hr {
+    color: var(--color-text);
+}
+
+/* button */
+
+button {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--bg-element);
+    border: none;
+    border-radius: 30px;
+    margin-right: 30px;
+    padding: 5px 30px;
+    display: inline;
+    float: right;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-opposite);
+}
+
+.mode-button {
+    display: inline-block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 25px 35px 0 0;
+    cursor: pointer;
+}
+
+/* fonts */
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--color-text);
+    margin: 30px 30px;
+    display: inline;
+    cursor: default;
+}
+
+p {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+/* table */
+
+table {
+    width: 100%;
+    font-size: 30px;
+    color: var(--color-text);
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 30px 10px;
+    cursor: default;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--bg-element);
+    color: #FFFFFF;
+}
+
+td {
+    border-radius: 30px;
+}
+
+/* table properties */
+
+.number {
+    width: 60px;
+    line-height: 54px;
+    border: 3px solid var(--bg-element);
+    border-radius: 30px;
+}
+
+.data {
+    width: 100%;
+    line-height: 54px;
+    border: 3px solid var(--bg-element);
+    border-radius: 30px;
+}
+
+.suggestion {
+    color: var(--color-text);
+    width: 340px;
+    height: 60px;
+    line-height: 54px;
+    background-color: var(--bg);
+    border: 3px solid var(--bg-opposite);
+    border-radius: 30px;
+}
+
+.left {
+    width: 45%;
+    float: left;
+    display: inline;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.middle {
+    width: 10%;
+    display: inline;
+}
+
+.right {
+    width: 20%;
+    float: right;
+    display: inline;
+}
+
+.row {
+    color: black;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 18px;
+}

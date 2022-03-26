@@ -1,0 +1,168 @@
+*{	
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* light & dark mode */
+
+:root {
+    --bg: #F4F4F4;
+    --color-text: #090A11;
+    --bg-element: #FB8F02;
+    --bg-opposite: #00ADB5;
+}
+
+.darkmode {
+    --bg: #0F2027;
+    --color-text: #FFFFFF;
+    --bg-element: #00ADB5;
+    --bg-opposite: #FB8F02;
+}
+
+/* containers */
+
+body {
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--color-text);
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.home-data {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/* fonts */
+
+h1 {
+    color: var(--color-text);
+    font-size: 144px;
+    font-weight: 500;
+    cursor: default;
+}
+
+p {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+/* button */
+
+button {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: var(--bg-element);
+    border: none;
+    border-radius: 30px;
+    padding: 5px 30px;
+    margin: 5px 10px 5px 0;
+    display: inline;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-opposite);
+}
+
+.home-button {
+    margin: 20px 10px auto;
+    width: 300px;
+}
+
+.mode-button {
+    display: inline-block;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin: 25px 35px 0 0;
+    cursor: pointer;
+}
+
+/* menu */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    backdrop-filter: blur(15px);
+}
+
+.number {
+    font-size: 36px;
+    color: #818181;
+    margin-right: 20px;
+    cursor: default;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600px) {
+    .dark-mode-toggle {
+        width: 35px;
+        height: 35px; 
+        margin-top: 27px;
+    }
+    h1 {
+        font-size: 90px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    .home-button {
+        width: 200px;
+    }
+
+    .number {
+        font-size: 24px;
+    }
+
+    .content-predmeti {
+        transform: translateY(12%);
+    }
+
+    .content-ucenici {
+        transform: translateY(20%);
+        padding-bottom: 10%;
+    }
+}
